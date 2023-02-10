@@ -1,33 +1,32 @@
-package com.AreaCalculatorExercise;
+package com.TeenValidator;
 
 import java.util.Scanner;
 
-public class AreaCalculatorMain {
+public class TeenMain {
 
 	public static void main(String[] args) {
 		int opc = 0;
-		Area areaCirculo = new Area();
-		Area areaRectangulo = new Area();
-		Area menuArea = new Area();
+		IsTeen esTenn = new IsTeen();
+		IsTeen menuIsTeen = new IsTeen();
 		Scanner leerValor = new Scanner(System.in);
-
 		do {
-			menuArea.mostrarMenu();
+			menuIsTeen.mostrarMenu();
 			opc = leerValor.nextInt();
 			switch (opc) {
 			case 1:
-				areaCirculo.leerDatosCirculo();
-				areaCirculo.area(0);
-				areaCirculo.mostrarDatosCirculo();
+				esTenn.leerDatos1();
+				esTenn.hasTeen(0, 0, 0);
+				esTenn.mostrarRespuesta1();
 				break;
 			case 2:
-				areaRectangulo.leerDatosRectangulo();
-				areaRectangulo.area(0, 0);
-				areaRectangulo.mostrarDatosRectangulo();
+				esTenn.leerDatos2();
+				esTenn.isTeen(0);
+				esTenn.mostrarRespuesta2();
 				break;
 			case 3:
 				System.out.println("¡GRACIAS POR USAR EL SISTEMA!");
 				break;
+
 			default:
 				System.out.println("¡VALOR INGRESADO NO VALIDO!");
 				break;
