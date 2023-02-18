@@ -49,12 +49,10 @@ public class IsTeen {
 	}
 
 	public void mostrarRespuesta1() {
-		boolean valor = hasTeen(num1, num2, num3);
-		System.out.println("¿Unos de los valores ingresados es Teen? " + valor);
+		System.out.println("¿Unos de los valores ingresados es Teen? " + hasTeen(num1, num2, num3));
 	}
 
 	public void mostrarRespuesta2() {
-		boolean valor = isTeen(num1);
-		System.out.println("¿Unos de los valores ingresados es Teen? " + valor);
+		System.out.println("¿Unos de los valores ingresados es Teen? " + isTeen(num1));
 	}
 }
